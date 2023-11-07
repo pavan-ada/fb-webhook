@@ -5,6 +5,7 @@ const api = express();
 
 const router = Router();
 router.get("/hello", (req, res) => res.send("Hello World!"));
+router.get("/webhook", (req, res) => res.send("Reached webhook endpoint!"));
 
 api.use("/api/", router);
 
