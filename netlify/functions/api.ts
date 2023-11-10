@@ -14,6 +14,7 @@ router.get('/webhook', function(req, res) {
     if (
         req.query['hub.mode'] == 'subscribe') {
         res.send(req.query['hub.challenge']);
+        console.log(req.query);
     } else {
         res.sendStatus(400);
     }
